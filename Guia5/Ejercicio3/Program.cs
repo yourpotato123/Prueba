@@ -10,18 +10,24 @@ namespace Ejercicio3
     {
         static void Main(string[] args)
         {
-            ///float prom = 0;                                     ///inicie promedio con 0 ya que es acumulador, es float por ser numero real
+            
             float prom, promayor, promenor;                           ///inicie promedio mayor y menor, por ser numero real
-            int lib, libmayor, libmenor;                        ///inicie libreta, libreta mayor y libreta menor, como integer por ser numero natural
+            int lib, libmayor, libmenor, cantalum;                        ///inicie libreta, libreta mayor y libreta menor, como integer por ser numero natural
             string nom, nomayor, nomenor;                       ///inicie nombre, nombre mayor y nombre menor, como string por ser cadena
+            int i;
+            i = 0;
+            cantalum = 0;
             promayor = 0;
             promenor = 0;
             libmenor = 0;
             libmayor = 0;
             nomayor = "";
             nomenor = "";
-            
-            for (int i = 0; i < 10; i = i+1)
+
+            Console.WriteLine("Ingrese cantidad de Alumnos.");
+            cantalum = Convert.ToInt16(Console.ReadLine());
+
+            for (i = 0; i < cantalum; i = +1)
             {
                 Console.WriteLine("Ingrese Nombre, Libreta, y Promedio del Alumno");
                 nom = (Console.ReadLine());
@@ -55,6 +61,7 @@ namespace Ejercicio3
             }
             Console.WriteLine("Promedio Mayor: \n Alumno: {0}. \n Libreta: {1}. \n Promedio: {2}.", nomayor, libmayor, promayor);
             Console.WriteLine("Promedio Menor: \n Alumno: {0}. \n Libreta: {1}. \n Promedio: {2}.", nomenor, libmenor, promenor);
+            Console.ReadLine();
         }
     }
 }
